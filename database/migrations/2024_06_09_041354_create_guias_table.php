@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('numero_oc');
             $table->string('comentario');
             $table->string('estado_firma');
-            $table->integer('id_cilindro');
-            $table->integer('rbd');
+            $table->foreignId('cilindros_id')->constrained()->onDelete('cascade');
+            $table->foreignId('establecimientos_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

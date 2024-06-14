@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class supervisor extends Model
 {
     use HasFactory;
+    protected $table = 'supervisores';
+    public function establecimientos(){
+        return $this->hasMany(establecimiento::class);
+    }
+
+    public function comuna(){
+        return $this->hasMany(comuna::class);
+    }
+
+
+
+
 }

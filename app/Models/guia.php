@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class guia extends Model
 {
     use HasFactory;
+    protected $table = 'guias';
+
+    public function supervisor(){
+        return $this->belongsTo(supervisor::class);
+    }
+
 }

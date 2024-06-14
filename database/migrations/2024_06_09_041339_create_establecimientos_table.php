@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('direccion');
             $table->string('telefono');
-            $table->integer('id_comuna');
-            $table->integer('id_supervisor');
+            $table->foreignId('comuna_id')->constrained()->onDelete('cascade');
+            $table->foreignId('supervisor_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

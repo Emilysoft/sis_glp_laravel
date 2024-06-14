@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class comuna extends Model
 {
     use HasFactory;
+    protected $table = 'comunas';
+
+    public function establecimientos(){
+        return $this->hasMany(establecimiento::class);
+    }
+
+
+
 }
