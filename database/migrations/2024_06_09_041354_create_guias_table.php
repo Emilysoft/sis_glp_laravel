@@ -22,6 +22,7 @@ return new class extends Migration
             $table->foreignId('cilindros_id')->constrained()->onDelete('cascade');
             $table->foreignId('establecimientos_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 
