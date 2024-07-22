@@ -14,6 +14,20 @@
 <a href="#">Editar Cilindro</a>
 
 
+<h1>Aqui se mostraran todos los Cilindros</h1>
+        
+        <ul>
+        @foreach($cilindros as $cilindro)
+           <li>
+               <a href="/cilindros/{{$cilindro->id}}">
+                {{$cilindro->formato}}
+               </a>
+           </li>
+        @endforeach
+        </ul>
+
+
+
 
 
 </body>

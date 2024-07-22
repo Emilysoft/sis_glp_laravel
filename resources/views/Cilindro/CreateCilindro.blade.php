@@ -10,16 +10,12 @@
     <form action="/cilindros" method="POST">
         @csrf
     
-        
+      
         <label for="tipo">Formato</label>
         <input type="text" name="formato" id="formato">
         <br>
  
         <button type="submit">Guardar</button>
-
-
-
-
 
 </body>
 </html>
